@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <style>
+ input[type=button]{
+ border-radius: 36px;
+background: linear-gradient(45deg, #00d2ff, #00b0e6);
+box-shadow:  14px -14px 28px #008fba,
+             -14px 14px 28px #00f9ff;</style>   
+      }
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+</body>
+</html>

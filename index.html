@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPY17KJFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MPY17KJFGK');
+</script>
+    
+    <title>SHQIPWEB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+#rc1 {
+  border-radius: 25px;
+}
+
+#rc2 {
+  border-radius: 25px;
+}
+
+#rc3 {
+  border-radius: 25px;
+}
+
+#rc4 {
+  border-radius: 25px;
+}
+
+#rc5 {
+  border-radius: 25px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: right;
+  width: 25%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+input[type=file]{
+    display: none;
+
+}
+
+label{
+    opacity: 1;
+    cursor:pointer;
+     margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #4d88ff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+box-shadow:  44px -44px 88px #008fba,
+             -44px 44px 88px #00f9ff;
+}
+input[type=submit]{
+display: none;
+}
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body  style="font-family:Verdana;color:#ffffff; background-image: linear-gradient(to right, red , black);">
+
+
+<div style="padding:15px;text-align:center; border-radius: 2px;">
+
+    <img src="Logo.png"  width="80%" alt="Logo">
+  
+ <div class="container">   
+  
+  <img src="shqipweb1.png" width="70%" height="100%" alt="shqipweb"> 
+  
+  </div>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a id="rc1" href="#">Shqip</a>
+    <a id="rc2" href="livetv.html">LIVE TV</a>
+    <a id="rc3" href="lradio.html">LIVE Radio</a>
+    <a id="rc3" href="livekosova.html">LIVE KOSOVA</a>
+    <a id="rc5" href="/Lojraf.html">lojrat</a>
+    <a id="rc4" href="/-bbksembedlive.html">BBVip Kosova LIVE</a>
+      
+       <br>
+
+ <button id="rc5" class="btn btn-success" onclick=" window.open('https://bigbrothervipkosovalive.com/kanali-1/','_blank')"> BB Vip Kosova Live kanal1</button>
+ <br>
+ <br>
+ 
+ <button id="rc5" class="btn btn-success" onclick=" window.open('https://bigbrothervipkosovalive.com/kanali-2/','_blank')"> BB Vip Kosova Live kanal2</button>
+    
+  </div>
+
+  <div class="main">
+    <h2>Naj 3 naj t'vjetër</h2>
+
+ 
+  </div>
+
+  <div style="background-color: #002266; border-radius: 30px;" class="right">
+        <h3>Posto për krejt shqiptart</h3>
+ 
+ <form action="upload.php" method="post" enctype="multipart/form-data">
+  <label for="inputtag">zgjidh foton
+  <input type="file" name="fileToUpload" id="inputtag">
+     </label> 
+     <label for="submitbtn">shto foton
+  <input type="submit" value="Shto foton" name="submit" id="submitbtn" >
+  </label>
+  </form>
+
+  </div>
+</div>
+
+<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">
+    
+ <?php
+    $files = scandir('uploads/');
+    foreach($files as $file) {
+        if($file !== "." && $file !== "..") {
+            echo "<img width='100%' src='uploads/$file' />";
+        }
+    }
+?>
+</div>
+
+</body>
+</html>
+
